@@ -1,0 +1,560 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.lightMode {
+    background-color: rgb(211, 202, 202);  
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+}
+
+#toggleButton {
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    width: 60px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+#toggleButton:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.arrow-left, 
+.arrow-right {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(198, 138, 35);
+    border-radius: 50%;
+    background-color: black;
+    color: rgb(198, 138, 35);
+    opacity: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 90vh;
+    cursor: pointer;
+}
+
+.arrow-left:hover , 
+.arrow-right:hover {
+    background-color: rgb(198, 138, 35);
+    color: black;
+}
+
+.arrow-left {
+    left: 20vh;
+}
+
+.arrow-right {
+    right: 20vh;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slider-item {
+    display: none;
+}
+
+.visible {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.slider-text {
+    position: absolute;
+    color: white;
+    opacity: 80%;
+    top: 40vh;
+    left: 10vh;
+    animation: slideIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+ 0% {
+   opacity: 0;
+ }
+ 100% {
+    opacity: 100%;
+ }
+}
+
+@keyframes slideIn {
+ 0% {
+    transform: translatex(-100px);
+ }
+ 100% {
+    transform: translatex(0x);
+ }   
+}
+
+#locationLogo {
+   color: white;
+}
+
+.adress {
+    display: flex;
+    width: 800px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: white;
+}
+
+#restaurantAdress {
+    position: absolute;
+    left: 20px;
+}
+
+.workinHours {
+    position: absolute;
+    width: 650px;
+    top: 20px;
+    color: white;
+}
+
+#clockLogo {
+    position: absolute;
+    left: 410px;
+}
+
+#restaurantWorkingHours {
+    position: absolute;
+    left: 435px;
+}
+
+.contactNumber {
+    display: flex;
+    color: white;
+} 
+
+.contactNumber:hover {
+    color: rgb(198, 138, 35);
+    cursor: pointer;
+}
+
+#phoneLogo {
+    position: absolute;
+    top: 20px;
+    left: 1010px;
+}
+
+#restaurantContactNumber {
+    position: absolute;
+    top: 20px;
+    left: 1035px;
+}
+
+.emailAdress {
+    display: flex;
+    color: white;
+}
+
+.emailAdress:hover {
+    cursor: pointer;
+}
+
+#emailLogo {
+    position: absolute;
+    top: 20px;
+    left: 1210px;
+}
+
+#restaurantEmailAdress {
+    position: absolute;
+    top: 20px;
+    left: 1235px;
+}
+
+#restaurantLogo {
+    position: absolute;
+    top: 90px;
+    left: 30px;
+    width: 70px;
+}
+
+#restaurantName {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 80PX;
+    color: rgb(198, 138, 35);
+    font-size: 25px;
+}
+
+.logoAndName:hover {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+}
+
+a:hover {
+    color: rgb(198, 138, 35);
+    cursor: pointer;
+}
+
+.nav {
+    position: absolute;
+    color: white;
+    top: 110px;
+    left: 420px;
+}
+
+.burger {
+    display: none;
+    position: relative;
+    top: 10px;
+    right: 80px;
+    width: 200px;
+}
+
+.burger:hover {
+    cursor: pointer;
+    color: rgb(198, 138, 35);
+}
+
+@media only screen and (max-width: 600px) {
+    body  {
+        width: 100%;
+        padding: 0;
+    }
+
+    .adress, .workinHours, .contactNumber, .emailAdress, .navList {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navListMobile {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        background-color: black;
+        height: 300px;
+        padding: 20px;
+        transition: 0.5s;
+        position: absolute;
+        top: 40px;
+        left: 10px;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 1024px) {
+    body {
+        width: 100%;
+        padding: 0;
+    }
+    .adress, .workinHours,  .contactNumber, .emailAdress, .navList {
+        display: none;
+    }
+    
+    .burger {
+        display: block;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navListMobile {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        background-color: black;
+        height: 300px;
+        padding: 20px;
+        transition: 0.5s;
+        position: absolute;
+        top: 40px;
+        left: 10px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    body {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.nav-list-hide {   
+    left: -600px;
+}
+
+.environment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; 
+}
+
+#gustoDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+#flavor {
+    margin-top: 20px;
+    color: rgb(198, 138, 35);
+}
+
+#offer {
+    color: white;
+}
+
+#forGap {
+    margin-bottom: 40px;
+}
+
+.notch {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    color: rgb(198, 138, 35);
+}
+
+.breakfastImg {
+    border-radius: 20px;
+}
+
+.breakfastImg:hover {
+    width: 140;
+    height: 240;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.appetizersImg {
+    border-radius: 20px;
+}
+
+.appetizersImg:hover {
+    width: 140;
+    height: 240;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.drinksImg {
+    border-radius: 20px;
+}
+
+.drinksImg:hover {
+    width: 140;
+    height: 240;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+#specialSelection {
+    color: rgb(198, 138, 35);
+    margin-top: 120px;
+}
+
+#deliciousMenu {
+    color: white;
+}
+
+#search {
+    padding: 15px 20px 15px 20px;
+    border: 1px solid rgb(197, 188, 188);
+    border-radius: 20px;
+}
+
+.recipesContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.recipeImg {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.recipe {
+    display: flex;
+    width: 500px;
+    margin: 20px;
+}
+
+.recipe:hover {
+    cursor: pointer;
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-left: 15px;
+    gap: 10px;
+    color: white;
+    opacity: 90%;
+}
+
+.texts:hover {
+    color: rgb(198, 138, 35);
+}
+
+.filterContainer {
+    padding: 20px 5% 0 5%;
+    margin: 20px 0px 30px 150px; 
+}
+
+#username {
+    padding: 15px 70px 15px 10px;
+    border-radius: 10px;
+}
+
+#telephone {
+    padding: 15px 70px 15px 10px;
+    border-radius: 10px;
+}
+
+#email {
+    padding: 15px 70px 15px 10px;
+    border-radius: 10px;
+}
+
+form {
+    margin: 30px;
+}
+
+textarea {
+    border: 1px solid rgb(191, 182, 182);
+    border-radius: 10px;
+    padding: 15px 70px 15px 10px;;
+    margin-bottom: 15px;
+}
+
+.reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    color: white;
+}
+
+input {
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: bisque;
+}
+
+#required {
+    padding: 15px 70px 15px 10px;
+    border-radius: 10px;
+}
+
+input.invalid {
+    border-color: orange;
+}
+
+input.valid {
+    border-color: rgb(42, 207, 42);
+}
+
+input + p {
+    color: orange;
+    opacity: 0;
+    height: 0;
+}
+
+input.invalid + p {
+    opacity: 1;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+#submit {
+    padding: 5px 15px;
+    border: 1px solid rgb(197, 189, 189);
+    border-radius: 20px;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: bisque;
+}
+
+.socialnNetworks {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    margin: 30px;
+}
+
+#facebook:hover {
+    cursor: pointer;
+    color: rgb(198, 138, 35);
+}
+
+#instagram:hover {
+    cursor: pointer;
+    color: rgb(198, 138, 35);
+}
+
+#twitter:hover {
+    cursor: pointer;
+    color: rgb(198, 138, 35);
+}
+
+#youtube:hover {
+    cursor: pointer;
+    color: rgb(198, 138, 35);
+}
+
+#googlemap:hover {
+    cursor: pointer;
+    color: rgb(198, 138, 35);
+}

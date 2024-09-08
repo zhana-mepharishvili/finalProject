@@ -1,0 +1,146 @@
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Taste delicious dishes">
+    <meta name="author" content="zhana mepharishvili">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="yummy, fresh, sweet, juicy, dinner">
+    <meta property="og:description" content="Taste delicious dishes">
+    <meta property="og:title" content="Gusto - Life is delicious">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href= "./images/logo.png">
+    <title>Gusto - Life is delicious</title>
+</head>
+<body>
+    <header>
+        <div class="slider">
+            <button id="toggleButton"><i class="fa-regular fa-lightbulb"></i></i></button>
+            <div class="slider-item visible">
+               <h1 class="slider-text">
+                <div class="text">
+                    <p>Where every flavor</p>
+                    <p>tells a story</p>
+                </div>
+               </h1>
+               <img src="./images/img1.jpg" width="100%" alt="pasta">
+            </div>
+            <div class="slider-item">
+                <h1 class="slider-text">
+                  <div class="text">
+                    <p>Flavors Inspired by</p>
+                    <p>the Seasons</p>
+                  </div>
+                </h1>
+                <img src="./images/img2.jpg" width="100%" alt="asian">
+            </div>
+            <div class="slider-item">
+                <h1 class="slider-text">
+                    <div class="text">
+                      <p>For the love of</p>
+                      <p>delicious food</p>
+                    </div>
+                </h1>
+               <img src="./images/img3.jpg" width="100%" alt="sushi">
+             </div>
+             <div class="arrow-right"><i class="fa-solid fa-angle-right"></i></i></div> 
+             <div class="arrow-left"><i class="fa-solid fa-angle-left"></i></i></div>
+         </div>
+        <div class="adress">
+            <i id="locationLogo" class="fa-solid fa-location-dot"></i>
+            <p id="restaurantAdress">Restaurant St, Delicious City, London 9578, UK</p>
+        </div>
+        <div class="workinHours">
+            <i id="clockLogo" class="fa-regular fa-clock"></i>
+            <p id="restaurantWorkingHours">Daily : 8.00 am to 10.00 pm</p>
+        </div>
+        <div class="contactNumber">
+            <i id="phoneLogo" class="fa-solid fa-phone"></i>
+            <p id="restaurantContactNumber">+1234567890</p>
+        </div>
+        <div class="emailAdress">
+            <i id="emailLogo" class="fa-regular fa-envelope"></i>
+            <p id="restaurantEmailAdress">booking@restaurant.com</p>
+        </div>
+        <div class="logoAndName">
+            <img id="restaurantLogo" src="./images/logo.png">
+            <p id="restaurantName">GUSTO RESTAURANT</p>
+        </div>
+        <nav class="nav">
+            <div class="navList">
+                <a href="#home">HOME</a>
+                <a href="#menus">MENUS</a>
+                <a href="#aboutUs">ABOUT US</a>
+                <a href="#ourchefs">OUR CHEFS</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+            <div class="burger">
+                <i class="fa-solid fa-bars"></i>
+                <div class="navListMobile nav-list-hide">
+                    <a href="#home">HOME</a>
+                    <a href="#menus">MENUS</a>
+                    <a href="#aboutUs">ABOUT US</a>
+                    <a href="#ourchefs">OUR CHEFS</a>
+                    <a href="#contact">CONTACT</a>
+                </div>
+            </div> 
+        </nav>
+    </header>
+    <main>
+        <div class="environment">
+            <h4 id="flavor">Flavors For Royalty</h4>
+            <h1 id="offer">We Offer Top Notch</h1>
+            <div id="gustoDescription">
+                <p>Contemporary and classic - Gusto is a modern bar and restaurant</p>
+                <p>reimagined to mix great fare and fun together</p>
+                <p id="forGap">with a decidedly Vermont twist.</p>
+            </div>
+        </div>
+        <div class="notch">
+            <div class="breakfast">
+                <img class="breakfastImg" src="./images/breakfast.jpg" width="130" height="220" alt="breakfast">
+                <p>Breakfast</p>
+            </div>
+            <div class="appetizers">
+                <img class="appetizersImg" src="./images/Appetizers.jpg" width="130" height="220" alt="appetizers">
+                <p>Appetizers</p>
+            </div>
+            <div class="drinks">
+                <img class="drinksImg" src="./images/drinks.jpg" width="130" height="220" alt="drinks">
+                <p>Drinks</p>
+            </div>   
+        </div>
+        <div class="menu">
+            <h4 id="specialSelection">Special Selection</h4>
+            <h1 id="deliciousMenu">Delicious Menu</h1>  
+        </div>
+        <div class="filterContainer">
+            <input type="text" placeholder="Discover your taste" id="search" />
+        </div>
+        <div class="recipesContainer"></div>  
+    </main>
+    <footer>
+        <div class="reservation">
+            <h1>Online Reservation</h1>
+            <form class="form">   
+                <input type="text" name="username" placeholder="Your Name"/>
+                <p>Username must be and containt 2 - 20 characters</p>
+                <input type="text" name="telephone" placeholder="Phone Number"/>
+                <p>Phone number must be a valid GE telephone number</p>
+                <input type="text" name="email" placeholder="Your Email"/>
+                <p>Email must be a valid address, e.g. Gusto@gmail.com</p>
+                <textarea name="message" rows="6" cols="33">Message</textarea><br>   
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </div>
+        <div class="socialnNetworks">
+            <p id="facebook">FACEBOOK</p>
+            <p id="instagram">INSTAGRAM</p>
+            <p id="twitter">TWITTER</p>
+            <p id="youtube">YOUTUBE</p>
+            <p id="googlemap">GOOGLE MAP</p>
+        </div>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+</html>
